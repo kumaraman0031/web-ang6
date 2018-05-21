@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-md" id="nav-menu">
+	<div class="container">
+	<!-- Brand -->
+  <a class="navbar-brand" href="#">
+  <img src="{{logo}}"/>
+  </a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" (click)="manuToggel(tog)" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar" [class.show]="showMenu">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" *ngFor="let list of menu" routerLink="{{list.link}}" routerLinkActive="active">
+        <a class="nav-link">{{list.name | titlecase}} </a>
+		  <ul class="submenu-list">
+			  <div *ngIf="list.name ==='company'">
+			  <li class="nav-item" *ngFor="let list of list.submenu" routerLink="{{list.link}}">
+				  <a class="nav-link">{{list.name | titlecase}} </a>
+				</li>
+			  </div>
+			  <div *ngIf="list.name ==='services'">
+				  <ul class="d-inline-block sm-s"><li class="nav-item" *ngFor="let list of list.submenu" routerLink="{{list.link}}">
+				  <a class="nav-link">{{list.name | titlecase}} </a>
+				</li>
+				  </ul>
+				  <ul class="d-inline-block sm-s"><li class="nav-item" *ngFor="let list of list.submenu2" routerLink="{{list.link}}">
+				  <a class="nav-link">{{list.name | titlecase}} </a>
+				</li>
+				  </ul>
+			  
+			  </div>
+			  <div *ngIf="list.name ==='how we work'">
+			  <li class="nav-item" *ngFor="let list of list.submenu" routerLink="{{list.link}}">
+				  <a class="nav-link">{{list.name | titlecase}} </a>
+				</li>
+			  </div>
+			  <div *ngIf="list.name ==='portfolio'">
+			  <li class="nav-item" *ngFor="let list of list.submenu" routerLink="{{list.link}}">
+				  <a class="nav-link">{{list.name | titlecase}} </a>
+				</li>
+			  </div>
+		  </ul>
+      </li>
+    </ul>
+  </div> 
+	</div>
+</nav>
+<div style="height: 110px;"></div>

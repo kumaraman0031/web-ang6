@@ -1,0 +1,127 @@
+
+//background
+.bg-violate{
+	background: $violate-color ;
+}
+.bg-title{
+	background: $light-grey-color;
+}
+//grid, mar padding
+a{
+	&:hover{
+		text-decoration: none !important;
+	}
+}
+.section {
+    padding-top: 40px;
+    padding-bottom: 40px;	
+	.boxIcon {
+		a{
+			color: $sub-title;
+		}
+		h2 {
+			font-size: 20px;
+			margin-bottom: 16px;
+			font-family: inherit;
+			font-weight: 800;
+			text-align: center;
+		}
+		p {
+			margin: 0;
+			text-align: center;
+		}
+	}
+	.center{
+		margin: 0 auto;
+		display: block;
+	}
+	
+}
+
+//nav menu
+#nav-menu{
+	background: $white-color;
+	color: $text-black-color;
+	cursor: pointer;
+	padding: 0;
+	position: fixed;
+	width: 100%;
+	z-index: 99;
+	ul{
+		li{
+			&:focus{
+				outline: none;
+			}
+			&:hover{
+				background: $orange-color;
+				color: $white-color;
+				ul.submenu-list{
+					display: block;
+				}
+			}
+			a{
+				padding: 41px 15px;
+			    font-size: 1.2em;
+				text-decoration: none;
+			}
+			ul.submenu-list {
+				list-style: none;
+				padding-left: 0;
+				padding: 0 0;
+				border-radius: 0 0 6px 6px;
+				box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.5);
+				display: none;
+				overflow: hidden;
+				position: absolute;
+				color: #000;
+				background: #fff;
+				a{
+					        padding: 9px 15px;
+							min-width: 222px;
+							font-size: 16px;
+							text-decoration: none;
+				}
+				ul.sm-s {
+					list-style: none;
+					padding: 8px;
+					float: left;
+					li{
+						border-bottom: 1px solid #EDECEC;
+					}
+				}
+			}
+		}
+		li.active{
+			background: $orange-color;
+			color: $white-color;
+		}
+	}
+	
+}
+//pages 
+#page-title {
+		    position: relative;
+			background-color: $light-grey-color;
+			border-bottom: 1px solid #EEE;
+		h1 {
+			padding: 0;
+			margin: 0;
+			line-height: 1;
+			font-weight: 600;
+			letter-spacing: 1px;
+			color: $light-black-color;
+			font-size: 28px;
+			text-transform: uppercase;
+		}
+}
+.achivements_div {
+		color: $black-color;
+	.heading-block {
+		h2 {
+    	color: #443e3e;
+		}
+		i{
+			font-size: 40px;
+		}
+	}
+}
